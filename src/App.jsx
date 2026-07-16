@@ -8,7 +8,7 @@ function App() {
 
         {/* Intestazione */}
         <header>
-          <h1 className='title-header'>Auralis</h1>
+          <h1 className='title-header'>AURALIS</h1>
         </header>
 
 
