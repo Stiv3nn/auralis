@@ -1,4 +1,5 @@
 import './App.css';
+import { FaEarListen } from 'react-icons/fa6';
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
 
         {/* Intestazione */}
         <header>
-          <h1 className='title-header'>AURALIS</h1>
+          <h1 className='title-header'> <FaEarListen size={15} /> AURALIS</h1>
         </header>
 
 
