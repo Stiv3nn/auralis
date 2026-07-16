@@ -4,7 +4,27 @@ function App() {
 
   return (
     <>
-      <div id='container'>Auralis</div>
+      <div id='container'>
+
+        {/* Intestazione */}
+        <header>
+          <h1 className='title-header'>Auralis</h1>
+        </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
     </>
   )
 }

@@ -11,3 +11,13 @@
     background-color: rgb(77, 74, 74);
     height: 100vh;
 }
+
+/* HEADER */
+header {
+    background-color: #0A100D;
+    min-height: 5vh;
+}
+
+.title-header {
+    color: white;
+}
