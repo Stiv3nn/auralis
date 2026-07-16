@@ -3,3 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ------------------------------------------- */
+
+/* Parametri del DIV principale CONTAINER */
+#container {
+    background-color: rgb(77, 74, 74);
+    height: 100vh;
+}

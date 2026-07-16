@@ -1,12 +1,12 @@
-import './App.css'
+import './App.css';
 
 function App() {
 
   return (
     <>
-      <h1>Auralis</h1>
+      <div id='container'>Auralis</div>
     </>
   )
 }
 
-export default App
+export default App;
