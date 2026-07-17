@@ -12,6 +12,11 @@ function App() {
           <h1 className='title-header'> <FaEarListen size={15} /> AURALIS</h1>
         </header>
 
+        {/* Parte principale */}
+        <main>
+
+        </main>
+
 
 
 

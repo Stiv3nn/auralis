@@ -31,3 +31,17 @@ header {
     align-self: center;
     margin-left: 20px;
 }
+
+/* --------------------------------------------------------------------------------------- */
+
+/* MAIN */
+
+main {
+    background-image: url('/src/assets/img_desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* ALTEZZA: tutto lo schermo meno l'header */
+    min-height: calc(100vh - 5vh);
+}
