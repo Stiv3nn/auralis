@@ -45,3 +45,33 @@ main {
     /* ALTEZZA: tutto lo schermo meno l'header */
     min-height: calc(100vh - 5vh);
 }
+
+.hero-content {
+    border: black 2px solid;
+    min-height: calc(100vh - 5vh);
+}
+
+.text1,
+.text2 {
+    font-family: "Markazi Text", sans-serif;
+    color: rgb(175, 145, 145);
+    display: flex;
+    /* ← centra orizzontalmente */
+    justify-content: center;
+    position: relative;
+    left: -400px;
+    top: 200px;
+}
+
+.text3 {
+    font-family: "Markazi Text", sans-serif;
+    font-weight: bold;
+    color: rgb(206, 184, 184);
+    font-size: 22px;
+    display: flex;
+    /* ← centra orizzontalmente */
+    justify-content: center;
+    position: relative;
+    left: -400px;
+    top: 200px;
+}
