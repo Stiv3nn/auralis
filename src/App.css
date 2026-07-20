@@ -8,28 +8,42 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 /* --------------------------------------------------------------------------------------- */
 
 /* Parametri del DIV principale CONTAINER */
 #container {
     background-color: rgb(77, 74, 74);
-    height: 100vh;
+    /* min-height per la flessibilità */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* HEADER */
 header {
     background-color: #0A100D;
-    min-height: 5vh;
+    min-height: 60px;
     display: flex;
+    align-items: center;
+    padding: 0 20px;
+    /* evita che l'header si restringa */
+    flex-shrink: 0;
 }
 
 .title-header {
     color: white;
     font-family: "Nobile", sans-serif;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: lighter;
-    align-self: center;
-    margin-left: 20px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -42,36 +56,161 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 
-    /* ALTEZZA: tutto lo schermo meno l'header */
-    min-height: calc(100vh - 5vh);
+    /* occpua tutto lo spazio rimanenete */
+    flex: 1;
+    position: relative;
+    padding: 0;
 }
 
 .hero-content {
-    border: black 2px solid;
-    min-height: calc(100vh - 5vh);
+    position: absolute;
+    top: 20%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px 35px;
 }
 
-.text1,
+.text1 {
+    font-family: "Markazi Text", sans-serif;
+    color: rgb(175, 145, 145);
+    text-align: left;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
 .text2 {
     font-family: "Markazi Text", sans-serif;
     color: rgb(175, 145, 145);
-    display: flex;
-    /* ← centra orizzontalmente */
-    justify-content: center;
-    position: relative;
-    left: -400px;
-    top: 200px;
+    font-size: 1.1rem;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .text3 {
     font-family: "Markazi Text", sans-serif;
     font-weight: bold;
     color: rgb(206, 184, 184);
-    font-size: 22px;
-    display: flex;
-    /* ← centra orizzontalmente */
-    justify-content: center;
-    position: relative;
-    left: -400px;
-    top: 200px;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* RESPOSNSIVE - TABLET (max 1024px) */
+
+@media screen and (max-width: 1024px) {
+    header {
+        min-height: 55px;
+        padding: 0 30px;
+    }
+
+    .title-header {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 30px 40px;
+        background-image: url('/src/assets/img_tablet.png');
+    }
+
+    .hero-content {
+        max-width: 550px;
+    }
+
+    .text1,
+    .text2 {
+        font-size: 1rem;
+    }
+
+    .text3 {
+        font-size: 1.6rem;
+    }
+
+}
+
+/* RESPONSIVE - MOBILE (max 768px) */
+
+@media screen and (max-width: 1024px) {
+    header {
+        min-height: 55px;
+        padding: 0 30px;
+    }
+
+    .title-header {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 30px 40px;
+        background-image: url('/src/assets/img_tablet.png');
+    }
+
+    .hero-content {
+        max-width: 550px;
+    }
+
+    .text1,
+    .text2 {
+        font-size: 1rem;
+    }
+
+    .text3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* RESPONSIVE - MOBILE (max 768px) */
+@media screen and (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        min-height: 50px;
+        padding: 0 15px;
+    }
+
+    .title-header {
+        font-size: 1rem;
+        gap: 6px;
+    }
+
+    .title-header svg {
+        font-size: 14px !important;
+    }
+
+    /* MAIN */
+    main {
+        padding: 20px 20px;
+        background-image: url('/src/assets/img_mobile.png');
+        background-position: center 30%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 10px 0;
+    }
+
+    /* TESTI MOBILE */
+    .text1 {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .text2 {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .text3 {
+        font-size: 1.3rem;
+    }
 }
