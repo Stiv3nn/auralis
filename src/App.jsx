@@ -29,6 +29,10 @@ function App() {
               <button type="submit" className='carica'>Mp3</button>
               <button type="submit" className='mp3'>Carica</button>
             </div>
+
+            <div className='nota-guida'>
+              <span>Incolla il link e lascia che Auralis faccia il resto</span>
+            </div>
           </div>
 
         </main>
