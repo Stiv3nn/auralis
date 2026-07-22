@@ -25,6 +25,10 @@ function App() {
           <div className='container-input'>
             <input type="search" placeholder='inserisci URL...' className='input-search' />
 
+            <div className='btn'>
+              <button type="submit" className='carica'>Mp3</button>
+              <button type="submit" className='mp3'>Carica</button>
+            </div>
           </div>
 
         </main>
