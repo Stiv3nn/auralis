@@ -21,6 +21,12 @@ function App() {
             <span className='text3'><em>Ascolta oltre il limite</em></span>
           </div>
 
+          {/* INPUT SEARCH */}
+          <div className='container-input'>
+            <input type="search" placeholder='inserisci URL...' className='input-search' />
+
+          </div>
+
         </main>
 
 
