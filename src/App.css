@@ -71,6 +71,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     width: 90%;
     max-width: 500px;
     padding: 30px 35px;
@@ -103,7 +104,8 @@ main {
 
 /* ------------------------------------------------------------------------------ */
 
-/* RESPOSNSIVE - TABLET (max 1024px) */
+
+/* RESPOSNSIVE - DESKTOP (max 1024px) */
 
 @media screen and (max-width: 1024px) {
     header {
@@ -117,7 +119,7 @@ main {
 
     main {
         padding: 30px 40px;
-        background-image: url('/src/assets/img_tablet.png');
+        background-image: url('/src/assets/img_desktop.png');
     }
 
     .hero-content {
@@ -132,12 +134,11 @@ main {
     .text3 {
         font-size: 1.6rem;
     }
-
 }
 
-/* RESPONSIVE - MOBILE (max 768px) */
+/* RESPOSNSIVE - TABLET (max 1024px) */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 768px) {
     header {
         min-height: 55px;
         padding: 0 30px;
@@ -150,6 +151,9 @@ main {
     main {
         padding: 30px 40px;
         background-image: url('/src/assets/img_tablet.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .hero-content {
@@ -159,10 +163,12 @@ main {
     .text1,
     .text2 {
         font-size: 1rem;
+        color: black;
     }
 
     .text3 {
         font-size: 1.6rem;
+        color: black;
     }
 }
 
