@@ -158,6 +158,7 @@ main {
 
     .hero-content {
         max-width: 550px;
+        left: 50%;
     }
 
     .text1,
@@ -202,6 +203,7 @@ main {
     .hero-content {
         max-width: 100%;
         padding: 10px 0;
+        left: 50%;
     }
 
     /* TESTI MOBILE */
