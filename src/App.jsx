@@ -15,6 +15,8 @@ function App() {
         {/* Parte principale */}
         <main>
 
+          {/* -- FINESTRA SINISTRA -- */}
+
           <div className='hero-content'>
             <span className='text1'>Dal web al tuo player</span>
             <span className='text2'>Converti e Scarica i tuoi brani in pochi secondi</span><br />
@@ -33,6 +35,12 @@ function App() {
             <div className='nota-guida'>
               <span>Incolla il link e lascia che Auralis faccia il resto</span>
             </div>
+          </div>
+
+          {/* FINESTRA DESTRSA */}
+          <div className='hero-content-dx'>
+            <span className='text-dx'>Ogni canzone racconta una storia, e ora puoi portarla sempre con te. <br /> Basta un link, un click e la musica è tua.</span>
+            <h1 className='title-dx'>AURALIS</h1>
           </div>
 
         </main>
