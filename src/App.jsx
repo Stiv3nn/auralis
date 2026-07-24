@@ -42,8 +42,12 @@ function App() {
             <span className='text-dx'>Ogni canzone racconta una storia, e ora puoi portarla sempre con te. <br /> Basta un link, un click e la musica è tua.</span>
             <h1 className='title-dx'>AURALIS</h1>
           </div>
-
         </main>
+
+        {/* FOOTER */}
+        <footer>
+          <h2 className='text-footer'>Footer di AURALIS</h2>
+        </footer>
 
 
 
