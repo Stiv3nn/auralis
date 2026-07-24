@@ -1,7 +1,11 @@
 import './App.css';
 import { FaEarListen } from 'react-icons/fa6';
+import TextMorph from './components/TextMorph';
 
 function App() {
+
+  // Definire la lista di parole per l'effetto morphing
+  const mieParole = "AURALIS, Headphones, SOUND, Acoustic";
 
   return (
     <>
@@ -40,7 +44,7 @@ function App() {
           {/* FINESTRA DESTRSA */}
           <div className='hero-content-dx'>
             <span className='text-dx'>Ogni canzone racconta una storia, e ora puoi portarla sempre con te. <br /> Basta un link, un click e la musica è tua.</span>
-            <h1 className='title-dx'>AURALIS</h1>
+            <h1 className='title-dx'><TextMorph words={mieParole} interval={2500} /></h1>
           </div>
         </main>
 

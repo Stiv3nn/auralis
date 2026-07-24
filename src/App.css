@@ -154,6 +154,7 @@ main {
     color: #EAE0D5;
     font-size: 12px;
     margin-top: 20px;
+    font-family: "Markazi Text", sans-serif;
 }
 
 /* FINESTRA DESTRA */
@@ -180,11 +181,12 @@ main {
     color: #C6AC8F;
     font-size: 11px;
     line-height: 1.8;
+    font-family: "Markazi Text", sans-serif;
 }
 
 .title-dx {
     position: relative;
-    top: 22%;
+    top: 25%;
     font-size: 100px;
     color: #C6AC8F;
     text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.6);
