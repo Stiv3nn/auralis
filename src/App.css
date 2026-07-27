@@ -224,18 +224,17 @@ footer {
     }
 
     main {
-        padding: 40px 20px;
+        padding: 100px;
         background-image: url('/src/assets/img_tablet.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
 
-        /* Layout verticale fluido per tablet */
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: flex-start !important;
-        gap: 20px;
+        gap: 0px !important;
     }
 
     .hero-content,
@@ -246,26 +245,38 @@ footer {
         left: auto !important;
         transform: none !important;
         width: 100% !important;
-        max-width: 500px;
+        max-width: 650px;
         margin: 0 auto !important;
-        padding: 10px;
+
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 10px 20px !important;
+        padding: 10px 20px !important;
     }
 
     .hero-content {
         order: 1;
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        padding-top: 30px !important;
     }
 
     .hero-content-dx {
         order: 2;
-        /* Previene tagli in altezza */
+        background-color: rgba(0, 0, 0, 0.4) !important;
         height: auto !important;
     }
 
     .container-input {
         order: 3;
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        padding-bottom: 30px !important;
     }
 
-    /* Correzione per non tagliare il TextMorph */
     .title-dx {
         top: auto !important;
         margin-top: 15px;
