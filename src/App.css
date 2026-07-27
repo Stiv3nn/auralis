@@ -1,6 +1,5 @@
-/* Importo il Google Font direttamente qui sul CSS */
 @import url('https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
 
 * {
     margin: 0;
@@ -12,7 +11,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    /* Eilima lo spazio bianco a destra causato da elementi troppo larghi */
+    /* Elimina lo spazio bianco e la barra di scorrimento orizzontale */
     overflow-x: hidden;
 }
 
@@ -21,10 +20,10 @@ body {
 /* Parametri del DIV principale CONTAINER */
 #container {
     background-color: rgb(77, 74, 74);
-    /* min-height per la flessibilità */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 /* HEADER */
@@ -34,7 +33,6 @@ header {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    /* evita che l'header si restringa */
     flex-shrink: 0;
 }
 
@@ -51,28 +49,25 @@ header {
 
 /* --------------------------------------------------------------------------------------- */
 
-/* MAIN */
+/* MAIN DESKTOP */
 
 main {
     background-image: url('/src/assets/img_desktop.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    /* occpua tutto lo spazio rimanenete */
     flex: 1;
     position: relative;
     padding: 0;
 }
 
-/* FINESTRA SINSITRA */
+/* FINESTRA SINISTRA */
 
 .hero-content {
     position: absolute;
     top: 20%;
     left: 29%;
     transform: translate(-50%, -50%);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +78,7 @@ main {
 }
 
 .text1 {
-    font-family: "Markazi Text", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: rgb(175, 145, 145);
     text-align: left;
     margin-bottom: 5px;
@@ -91,7 +86,7 @@ main {
 }
 
 .text2 {
-    font-family: "Markazi Text", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: rgb(175, 145, 145);
     font-size: 1.1rem;
     text-align: left;
@@ -100,7 +95,7 @@ main {
 }
 
 .text3 {
-    font-family: "Markazi Text", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: rgb(206, 184, 184);
     font-size: 1.5rem;
@@ -110,7 +105,6 @@ main {
 /* CONTAINER INPUT */
 
 .container-input {
-    /* border: black 2px solid; */
     position: absolute;
     top: 50%;
     left: 29%;
@@ -136,7 +130,6 @@ main {
 .btn {
     width: 100%;
     margin-top: 20px;
-    /* border: black 1px solid; */
     display: flex;
     justify-content: space-around;
 }
@@ -147,23 +140,20 @@ main {
     height: 25px;
     background-color: #902923;
     border-radius: 100px;
-    /* border: black 0px; */
+    font-family: "Montserrat", sans-serif;
     cursor: pointer;
 }
 
 .nota-guida {
-    /* border: black 1px solid; */
-    margin-top: 10px;
-    color: #EAE0D5;
-    font-size: 12px;
     margin-top: 20px;
-    font-family: "Markazi Text", sans-serif;
+    color: rgb(206, 184, 184);
+    font-size: 11px;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* FINESTRA DESTRA */
 
 .hero-content-dx {
-    /* border: 1px solid black; */
     height: 300px;
     position: absolute;
     top: 40%;
@@ -184,7 +174,7 @@ main {
     color: #C6AC8F;
     font-size: 11px;
     line-height: 1.8;
-    font-family: "Markazi Text", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .title-dx {
@@ -195,10 +185,13 @@ main {
     text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.6);
 }
 
+.title-dx * {
+    font-family: "Montserrat", sans-serif !important;
+}
+
 /* FOOTER */
 
 footer {
-    /* border: 1px solid black; */
     min-height: 90px;
     background-color: #0A100D;
     display: flex;
@@ -215,23 +208,12 @@ footer {
     margin: 0px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* ------------------------------------------------------------------------------ */
 
-
-/* RESPOSNSIVE - DESKTOP (max 1024px) */
+/* RESPONSIVE - TABLET (max 1024px) */
 
 @media screen and (max-width: 1024px) {
+
     header {
         min-height: 55px;
         padding: 0 30px;
@@ -242,47 +224,59 @@ footer {
     }
 
     main {
-        padding: 30px 40px;
-        background-image: url('/src/assets/img_desktop.png');
-    }
-
-    .hero-content {
-        max-width: 550px;
-    }
-
-    .text1,
-    .text2 {
-        font-size: 1rem;
-    }
-
-    .text3 {
-        font-size: 1.6rem;
-    }
-}
-
-/* RESPOSNSIVE - TABLET (max 1024px) */
-
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-    header {
-        min-height: 55px;
-        padding: 0 30px;
-    }
-
-    .title-header {
-        font-size: 1.1rem;
-    }
-
-    main {
-        padding: 30px 40px;
+        padding: 40px 20px;
         background-image: url('/src/assets/img_tablet.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        /* Layout verticale fluido per tablet */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 20px;
+    }
+
+    .hero-content,
+    .hero-content-dx,
+    .container-input {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 500px;
+        margin: 0 auto !important;
+        padding: 10px;
     }
 
     .hero-content {
-        max-width: 550px;
-        left: 50%;
+        order: 1;
+    }
+
+    .hero-content-dx {
+        order: 2;
+        /* Previene tagli in altezza */
+        height: auto !important;
+    }
+
+    .container-input {
+        order: 3;
+    }
+
+    /* Correzione per non tagliare il TextMorph */
+    .title-dx {
+        top: auto !important;
+        margin-top: 15px;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-dx * {
+        font-size: 2.2rem !important;
     }
 
     .text1,
@@ -300,7 +294,6 @@ footer {
 /* RESPONSIVE - MOBILE (max 768px) */
 @media screen and (max-width: 768px) {
 
-    /* HEADER */
     header {
         min-height: 50px;
         padding: 0 15px;
@@ -315,22 +308,12 @@ footer {
         font-size: 14px !important;
     }
 
-    /* MAIN */
     main {
         padding: 20px 20px;
         background-image: url('/src/assets/img_mobile.png');
         background-position: center 30%;
-        justify-content: flex-start;
-        align-items: center;
     }
 
-    .hero-content {
-        max-width: 100%;
-        padding: 10px 0;
-        left: 50%;
-    }
-
-    /* TESTI MOBILE */
     .text1 {
         font-size: 0.9rem;
         margin-bottom: 4px;
