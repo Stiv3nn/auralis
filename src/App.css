@@ -200,12 +200,27 @@ footer {
     flex-shrink: 0;
 }
 
-.text-footer {
-    color: white;
+.footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 800px;
+}
+
+.footer-content p {
+    color: #EAE0D5;
     font-family: "Nobile", sans-serif;
-    font-size: 1.2rem;
-    font-weight: lighter;
-    margin: 0px;
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Nota legale/disclaimer più discreta */
+.footer-content .disclaimer {
+    color: #8D8D8D;
+    font-size: 0.75rem;
+    font-weight: 300;
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -368,5 +383,15 @@ footer {
 
     .text3 {
         font-size: 1.3rem;
+    }
+
+    .footer-content .disclaimer {
+        font-size: 11px;
+    }
+
+    .seconda-frase {
+        display: block;
+        margin-top: 4px;
+        font-size: 10px;
     }
 }

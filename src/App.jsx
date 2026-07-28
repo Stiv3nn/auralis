@@ -50,7 +50,10 @@ function App() {
 
         {/* FOOTER */}
         <footer>
-          <h2 className='text-footer'>Footer di AURALIS</h2>
+          <div className="footer-content">
+            <p>© 2026 <strong>AURALIS</strong> - Educational & Portfolio Project Only. </p>
+            <p className='disclaimer'>Sviluppato esclusivamente a scopo didattico. <span className="seconda-frase">Nessun intento di violazione del copyright.</span></p>
+          </div>
         </footer>
 
 
