@@ -291,6 +291,11 @@ footer {
         justify-content: space-evenly;
     }
 
+    .carica,
+    .mp3 {
+        width: 120px;
+    }
+
     .text-dx {
         color: #cdad83 !important;
     }
