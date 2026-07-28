@@ -43,7 +43,7 @@ const COMPONENT_DEFAULTS = {
     font: {
         fontFamily: "Inter",
         variant: "Bold",
-        fontSize: 100,
+        fontSize: 80,
         lineHeight: "1.2em",
         letterSpacing: "0em",
         textAlign: "center",
