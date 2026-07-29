@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import { FaEarListen } from 'react-icons/fa6';
 import TextMorph from './components/TextMorph';
@@ -6,6 +7,8 @@ function App() {
 
   // Definire la lista di parole per l'effetto morphing
   const mieParole = "AURALIS, SOUND, ACOUSTIC, MUSIC";
+
+
 
   return (
     <>
