@@ -12,6 +12,54 @@ function App() {
   const [url, setUrl] = useState('');
   const [loading, setLoading] = useState('false');
 
+  // Funzione per chiamare il backend ed eseguire il download
+  const handleDownload = async (e) => {
+    e.preventDefault();
+
+    if (!url.trim()) {
+      alert("Inserisci un URL valido di YouTube!");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // Inviamo l'URL in formato JSON al server Flask sulla porta 5000
+      const response = await fetch('http://localhost:5000/api/donwload', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url: url }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Errore durante il download del brano.');
+      }
+
+      // Riceviamo il file MP3 dal server sotto forma di Blob (binary large object)
+      const blob = await response.blob();
+
+      // Creiamo un URL temporaneo per il file ricevuto
+      const downloadUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.download = 'brano_auralis.mp3'; // Nome predefinito del file scaricato
+      document.body.appendChild(link);
+      link.click();
+
+      // Pulizia dopo il download
+      link.remove();
+      window.URL.revokeObjectURL(downloadUrl);
+
+    } catch (error) {
+      console.log(error);
+      alert("Si è verificato un errore durante la conversazione.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <div id='container'>
@@ -34,11 +82,35 @@ function App() {
 
           {/* INPUT SEARCH */}
           <div className='container-input'>
-            <input type="search" placeholder='inserisci URL...' className='input-search' />
+
+            {/* Collegare l'input allo stato url con onChange e value */}
+            <input
+              type="search"
+              placeholder='inserisci URL...'
+              className='input-search'
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+            />
 
             <div className='btn'>
-              <button type="submit" className='carica'>Mp3</button>
-              <button type="submit" className='mp3'>Carica</button>
+              {/* I BTN carica/mp3 ora invocano handleDownload */}
+              <button
+                type="button"
+                className='carica'
+                onClick={handleDownload}
+                disabled={loading}
+              >
+                {loading ? "Conversione..." : "Mp3"}
+              </button>
+
+              <button
+                type="button"
+                className='mp3'
+                onClick={handleDownload}
+                disabled={loading}
+              >
+                {loading ? "Attendi..." : "Carica"}
+              </button>
             </div>
 
             <div className='nota-guida'>
