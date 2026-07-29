@@ -6,7 +6,7 @@ import yt_dlp
 
 # Inizializziamo l'applicazione Flask e abilitiamo CORS (per permettere a React su localhost di comunicare)
 app = Flask(__name__)
-CORS(app)
+CORS(app, expose_headers = ["Content-Disposition"])
 
 @app.route('/api/download', methods=['POST'])
 def download_audio():
@@ -23,6 +23,7 @@ def download_audio():
     # 3. Impostiamo le opzioni di yt-dlp
     opzioni = {
         'format': 'bestaudio/best',
+        'ffmpeg_location': r'G:\Altri computer/Il mio laptop\Downloads/ffmpeg-8.1-essentials_build/ffmpeg-8.1-essentials_build/bin' ,
         'writemetadata': True,
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
@@ -47,7 +48,7 @@ def download_audio():
         return send_file(
             mp3_filepath,
             as_attachment=True,
-            mimetype='audio/mpeg'
+            download_name=os.path.basename(mp3_filepath)
         )
 
     except Exception as e:
