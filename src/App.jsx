@@ -8,7 +8,9 @@ function App() {
   // Definire la lista di parole per l'effetto morphing
   const mieParole = "AURALIS, SOUND, ACOUSTIC, MUSIC";
 
-
+  // Stato per l'input URL e per lo stato di caricamento
+  const [url, setUrl] = useState('');
+  const [loading, setLoading] = useState('false');
 
   return (
     <>
