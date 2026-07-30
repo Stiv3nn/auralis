@@ -201,16 +201,6 @@ main {
     }
 }
 
-.carica,
-.mp3 {
-    width: 150px;
-    height: 25px;
-    background-color: #902923;
-    border-radius: 100px;
-    font-family: "Montserrat", sans-serif;
-    cursor: pointer;
-}
-
 .nota-guida {
     margin-top: 20px;
     color: rgb(206, 184, 184);
@@ -359,29 +349,6 @@ footer {
         padding-bottom: 30px !important;
     }
 
-    /* Ridurre la larghezza dell'input e lo centriamo */
-    .container-input input {
-        width: 75% !important;
-        max-width: 420px !important;
-        margin: 0 auto 15px auto !important;
-        display: block !important;
-        text-align: center;
-    }
-
-    .btn {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .carica,
-    .mp3 {
-        width: 120px;
-    }
-
-    .text-dx {
-        color: #cdad83 !important;
-    }
-
     .title-dx {
         top: auto !important;
         margin-top: 15px;
@@ -411,6 +378,7 @@ footer {
         font-size: 1.7rem;
         text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5)
     }
+
 }
 
 /* RESPONSIVE - MOBILE (max 768px) */
