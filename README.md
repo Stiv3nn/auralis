@@ -81,5 +81,5 @@ npm run dev
 ---
 
 <div align="center">
-  <sub>Sviluppato con passione da <strong>Stiven Hoxha</strong> · 2026</sub>
+  <sub>Sviluppato da <strong>Stiven Hoxha</strong> · 2026</sub>
 </div>
