@@ -97,23 +97,29 @@ function App() {
           {/* INPUT SEARCH - Avvolto nel tag form per gestire sia il click che il tasto Invio */}
           <form onSubmit={handleDownload} className='container-input'>
 
-            {/* Collegare l'input allo stato url con onChange e value */}
-            <input
-              type="search"
-              placeholder='inserisci URL...'
-              className='input-search'
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
-            />
+            <div className="search-box">
 
-            <div className='btn'>
+              {/* Collegare l'input allo stato url con onChange e value */}
+              <input
+                type="text"
+                placeholder='Incolla il link di YouTube...'
+                className='input-search'
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+              />
+
+
               {/* Impostati su type="submit" per collegarli correttamente alla funzione handleDownload */}
               <button
                 type="submit"
-                className='carica'
+                className='btn-convert'
                 disabled={loading}
               >
-                {loading ? "Conversione..." : "Scarica in Mp3"}
+                {loading ? (
+                  <span className="spinner"></span>
+                ) : (
+                  "Scarica MP3"
+                )}
               </button>
 
             </div>
