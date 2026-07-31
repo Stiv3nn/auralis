@@ -23,7 +23,7 @@ def download_audio():
     # 3. Impostiamo le opzioni di yt-dlp
     opzioni = {
         'format': 'bestaudio/best',
-        'ffmpeg_location': r'G:\Altri computer/Il mio laptop\Downloads/ffmpeg-8.1-essentials_build/ffmpeg-8.1-essentials_build/bin' ,
+        # 'ffmpeg_location': r'G:\Altri computer/Il mio laptop\Downloads/ffmpeg-8.1-essentials_build/ffmpeg-8.1-essentials_build/bin' ,
         'writemetadata': True,
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
@@ -56,4 +56,4 @@ def download_audio():
 
 if __name__ == '__main__':
     # Avviamo il server in locale sulla porta 5000
-    app.run(port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
