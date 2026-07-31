@@ -1,0 +1,10 @@
+# > Questo file serve per la gestione delle dipendenze del progetto (l'equivalente del file package.json in ambiente Node.js/React).
+# > Quando si sviluppa in locale sul proprio PC, le librerie Python (come flask, flask-cors, yt-dlp) sono installate nella nostra macchina.
+# > Quando si sposta il codice all'interno di un container Docker --> Docker parte da un sistema operativo Linux completamente pulito che ha solo Python base, ma non ha nessuna delle librerie che abbiamo usato per scrivere il codice.
+# > Il file requirements.txt serve proprio a dare a Docker la lista di tutto ciò che deve installare tramite "pip" per far girare il backend senza errori.
+
+
+
+flask # micro-framework web per Python. Serve per creare il server HTTP, definire le rotte e gestire le richieste e risposte web.
+flask-cors # gestisce il meccanismo CORS. Permette a React di fare chiamate API al backend Flask senza venire bloccato dalle regole di sicurezza del browser.
+yt-dlp # è il motore principale dell'applicazione. Si occupa di fare lo scraping del link YouTube inviato dall'utente, estrarre i metadati (titolo, copertina, ecc..) e scaricare il flusso audio.
