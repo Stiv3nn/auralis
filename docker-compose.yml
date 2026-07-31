@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  # Servizio Backend (Flask)
+  backend:
+    build: ./backend
+    container_name: auralis-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  # Servizio Frontend (React + Nginx)
+  frontend:
+    build: .
+    container_name: auralis-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
