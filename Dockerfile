@@ -12,6 +12,9 @@ RUN npm run build
 # STAGE 2: Servire i file statici con Nginx
 FROM nginx:alpine
 
+# Copia la configurazione personalizzata di Nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Copia i file compilati dallo Stage 1 dentro la cartella pubblica di Nginx
 COPY --from=build /app/dist /usr/share/nginx/html
 
