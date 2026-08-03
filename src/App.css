@@ -120,6 +120,7 @@ main {
 }
 
 .search-box {
+    width: 100%;
     position: relative;
     display: flex;
     align-items: center;
@@ -141,6 +142,7 @@ main {
 
 .input-search {
     flex: 1;
+    min-width: 0;
     background: transparent;
     border: none;
     outline: none;
@@ -399,7 +401,7 @@ footer {
     }
 
     main {
-        padding: 120px 40px;
+        padding: 120px 15px;
         background-image: url('/src/assets/img_mobile.png');
         background-position: center 30%;
     }
